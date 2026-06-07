@@ -7,8 +7,9 @@ import { initSocket } from "./socket";
 const start = async () => {
   await connectDB();
 
-  const server = app.listen(config.port, () => {
-    console.log(`Server running on port ${config.port} in ${config.nodeEnv} mode`);
+  const host = process.env.HOST || process.env.IP || "0.0.0.0";
+  const server = app.listen(config.port, host, () => {
+    console.log(`Server running on ${host}:${config.port} in ${config.nodeEnv} mode`);
   });
 
   initSocket(server);
