@@ -1,0 +1,28 @@
+plugins = []
+headers = []
+redirects = []
+
+[functions]
+
+[functions."*"]
+
+[build]
+publish = "U:\\projects\\MERN Stack\\snapConnect\\client\\.next"
+publishOrigin = "config"
+commandOrigin = "config"
+command = "npm run build"
+base = "U:\\projects\\MERN Stack\\snapConnect\\client"
+
+[build.environment]
+
+[build.processing]
+
+[build.processing.css]
+
+[build.processing.html]
+
+[build.processing.images]
+
+[build.processing.js]
+
+[build.services]
